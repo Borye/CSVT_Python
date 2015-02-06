@@ -1,0 +1,26 @@
+How to use Apache:
+
+Install: http://jingyan.baidu.com/album/29697b912f6539ab20de3cf8.html?picindex=11, 
+         http://blog.sina.com.cn/s/blog_8f1001e10101bihy.html
+
+cmd
+cd C:\ApacheXX\bin    (location of your Apache install file)
+httpd -k install      (must use cmd as Administrator)
+httpd -k start
+httpd -k stop         (if you want to stop the server)
+httpd -k status
+
+open browser 127.0.0.1
+
+logs: ApacheXX\logs  access log, error log
+
+conf: ApacheXX\conf\httpd.conf (important: DocumentRoot, User/Group, include config, listen)
+
+Get start:
+
+Add a folder into ApacheXX\htdocs\
+Add html file into ApacheXX\htdocs\New Folder
+To see the html file, run 127.0.1/New Folder
+
+For more knowledge of web developer: 
+www.w3school.com 

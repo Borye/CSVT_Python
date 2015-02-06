@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{%block title%}
+		{{title|default:'default'}}
+		{%endblock%}
+	</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<header>
+		<nav>
+			{%block nav%}
+			<ul>
+				{%for nav in navs%}
+				<li><a href="">{{nav}}</a></li>
+				{%endfor%}
+			</ul>
+			{%endblock%}
+		</nav>
+	</header>
+	<section>
+		{%block main%}
+		<article>
+			{%if new%}
+			<header>{{new.title}}</header>
+			<p>{{new.content}}</p>
+			{%else%}
+			<h1>welcome!!</h1>
+			{%endif%}
+		</article>
+		<section>
+			{%if person%}
+			姓名: {{person.name}}<br />
+			性别: {%if person.sex == 'male'%}
+					男<br />
+				 {%else%}
+				    女<br />
+			     {%endif%}
+			{%else%}
+			{%endif%}
+			婚否: {%if person.marry%}
+			        已婚<br />
+			      {%else%}
+			        未婚
+			      {%endif%}
+		</section>
+		{%endblock%}
+	</section>
+</body>
+</html>

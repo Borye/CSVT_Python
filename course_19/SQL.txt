@@ -1,0 +1,45 @@
+mysql -h127.0.0.1 -uroot [-p]
+
+show databases;
+
+create database pythoner;   ## create database
+
+use pythoner     # use that database
+
+show tables;    # show how many tables in that database  
+
+create table info(id int, name varchar(20), age int);     ## varchar means variable string
+
+desc info;
+
+drop table info;     ## delete that info
+
+drop database pythoner ## delete pythoner
+
+## add data
+
+insert into info value(1, 'borye', 20);
+
+select * from info;
+
+insert into info(id, name) value(2, 'zou', 20);
+
+insert into info(id, name) value(3, 'qi'), (4, 'xian');
+
+insert into info(id, name) value(5, 'qi'), (6, 'xian');
+
+select id, name from info;
+
+## delete data
+
+delete from info where id = 6;
+
+delete from info where age is NULL
+
+## modify
+
+update info set age = 30 where name = 'zou';
+
+update info set age = 40 where id = 3;
+
+quit;

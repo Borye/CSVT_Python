@@ -1,0 +1,8 @@
+index.html
+index.htm
+default.html
+default.htm
+
+download these to local 
+
+complete URL: http://www.baidu.com:80/index.html

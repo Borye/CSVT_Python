@@ -1,0 +1,53 @@
+body{
+	margin: 0 auto;
+	width: 900px;
+}
+
+#header {
+	background-image: url("../images/xq_logo.gif");
+	background-repeat: no-repeat;
+	height: 58px;
+}
+
+#header nav{
+	position: relative;
+	top: 33px;
+	left: 456px;
+	width: 440px;
+}
+
+#header nav ul li{
+	display: inline-block;
+	width: 70px;
+}
+
+#left{
+	width: 60%;
+	float: left;
+}
+
+#left aside img{
+	width: 300px;
+}
+
+#left aside{
+	text-align: center;
+}
+
+#left p{
+	text-indent: 2em;
+}
+
+#right{
+	width: 35%;
+	float: right;
+}
+
+#footer{
+	clear: both;
+	text-align: center;
+}
+
+article header{
+	text-align: center;
+}

@@ -1,0 +1,44 @@
+1. To start a new django project, cd to the project directory, then
+
+code: django-admin.py startproject [projectname](web01)
+
+2. To run the django server, cd to the [projectname] directory, then 
+
+code: python manage.py runserver
+
+(if we use python manage.py runserver 0.0.0.0:7000
+then we can find our page at 192.168.0.1:7000)
+
+3. To start a new web app, we could do
+
+code: python manage.py startapp [appname](blog)
+
+4. Then we need to register our app, go to web01/settings.py, add one line ('blog',) to INSTALLED_APPS
+
+5. find urls.py add url resource: url(r'^index/$', 'blog.views.index') to urlpattern
+
+6. runserver then goto http://127.0.0.1:8000/index 
+
+7. add module blog.views, find blog/views.py, add:
+   
+   from django.http import HttpResponse
+   
+   def index(req):
+       return HttpResponse('<h1>hello world!</h1>')
+
+req means the request from web01 to server, and though index function, we return a http line which is hello world!
+
+8. we can use python manage.py shell to use the souce in django. 
+
+9. we add http templates to blog/templates then create a index.html. After edit index.html, modify views.py:
+   from django.template import loader, Context
+   
+   def index(req):
+       t = loader.get_template('index.html')
+       c = Context({})
+       return HttpResponse(t.render(c))
+
+10. we could add template variable in {{XXX}}, then we add variable in views.py
+
+    c = Context({{'XXX': 'add some word'}}
+

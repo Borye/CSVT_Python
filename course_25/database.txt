@@ -1,0 +1,3 @@
+create database db_3 default charset utf8;
+
+create table menu (id int auto_increment primary key, name char(10), price float);
